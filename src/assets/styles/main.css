@@ -12,6 +12,10 @@ a:hover {
 
 @tailwind utilities;
 
+.max-w-400 {
+  max-width: 400px;
+}
+
 .nav, .footer {
   background-color: #013c9a;
 }
