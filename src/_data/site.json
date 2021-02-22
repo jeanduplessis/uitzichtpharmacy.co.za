@@ -1,8 +1,8 @@
 {
-  "site_name": "Starter",
-  "title": "Eleventy Starter Boilerplate",
-  "description": "Starter code for your 11ty blog Boilerplate",
-  "url": "https://example.com",
+  "site_name": "Uitzicht Pharmacy",
+  "title": "Uitzicht Pharmacy",
+  "description": "For all your pharmaceutical needs and more.",
+  "url": "https://uitzichtpharmacy.co.za",
   "locale": "en",
-  "author": "Anonymous"
+  "author": "Jean du Plessis"
 }

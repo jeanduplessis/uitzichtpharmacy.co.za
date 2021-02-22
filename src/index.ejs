@@ -1,32 +1,73 @@
 ---
-pagination:
-  data: collections.posts
-  size: 5
-  alias: list
-  reverse: true
-permalink: '<% if (pagination.pageNumber > 0) { %><%= `page${pagination.pageNumber + 1}/index.html` %><% } else { %>index.html<% } %>'
 eleventyComputed:
-  title: '<% if (pagination.pageNumber > 0) { %><%= `Page ${pagination.pageNumber + 1} | ${site.title}` %><% } else { %><%= site.title %><% } %>'
+  title: <%= site.title %>
 ---
 
-<ul>
-  <% list.forEach((post) => { %>
-  <li class="mb-3 flex justify-between">
-    <a href="<%= post.url %>"><%= post.data.title %></a>
+<section id="about">
+  <h2>About Us</h2>
+</section>
 
-    <div><%= this.dateFns.format(new Date(post.data.date), 'LLLL d, yyyy') %></div>
-  </li>
-  <% }) %>
-</ul>
+<section id="address">
+  <h2>Address</h2>
+  <address>
+    Shop 2 &amp; 3<br />
+    Uitzicht Shopping Centre<br />
+    Cnr Vatican & Sicily Streets<br />
+    Uitzicht<br />
+    Western Cape
+  </address>
+  <img
+      src="https://maps.googleapis.com/maps/api/staticmap?center=uitzicht%20pharmacy&scale=2&size=400x400&markers=size:mid%7Ccolor:red%7cuitzicht%20pharmacy&key=AIzaSyD_cF0Fl7Nn9CGiFQ56IXjQJuvIxO3dpPQ"
+      alt="Uitzicht Pharmacy map location"
+    />
+</section>
 
-<div class="text-sm flex justify-between">
-  <% if (pagination.previous) { %>
-  <div>
-    <a href="<%= pagination.previous.replace(/index.html$/, "") %>">← Newer Posts</a>
-  </div>
-  <% } %> <% if (pagination.next) { %>
-  <div class="text-right ml-auto">
-    <a href="<%= pagination.next.replace(/index.html$/, "") %>">Older Posts →</a>
-  </div>
-  <% } %>
-</div>
+<section id="hours">
+  <h2>Hours</h2>
+
+  <ol>
+    <li>
+      <strong class="w-24 mr-2 inline-block">Sunday</strong>
+      <time datetime="10:00">10am</time>–<time datetime="13:00">1pm</time>
+    </li>
+    <li>
+      <strong class="w-24 mr-2 inline-block">Monday</strong> <time datetime="09:00">9am</time>–<time
+        datetime="18:00"
+        >6pm</time
+      >
+    </li>
+    <li>
+      <strong class="w-24 mr-2 inline-block">Tuesday</strong>
+      <time datetime="09:00">9am</time>–<time datetime="18:00">6pm</time>
+    </li>
+    <li>
+      <strong class="w-24 mr-2 inline-block">Wednesday</strong>
+      <time datetime="09:00">9am</time>–<time datetime="18:00">6pm</time>
+    </li>
+    <li>
+      <strong class="w-24 mr-2 inline-block">Thursday</strong>
+      <time datetime="09:00">9am</time>–<time datetime="18:00">6pm</time>
+    </li>
+    <li>
+      <strong class="w-24 mr-2 inline-block">Friday</strong> <time datetime="09:00">9am</time>–<time
+        datetime="18:00"
+        >6pm</time
+      >
+    </li>
+    <li>
+      <strong class="w-24 mr-2 inline-block">Saturday</strong>
+      <time datetime="09:00">9am</time>–<time datetime="14:00">2pm</time>
+    </li>
+  </ol>
+</section>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+
+  <address>
+    <strong>Phone:</strong> <a href="tel:+27219750998">021 975 0998</a><br />
+    <strong>Emergency:</strong> <a href="tel:+27618248830">061 824 8830</a><br />
+    <strong>Email:</strong>
+    <a href="mailto:uitzichtpharmacy@gmail.com">uitzichtpharmacy@gmail.com</a>
+  </address>
+</section>
