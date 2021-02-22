@@ -3,12 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="icon" href="/favicon.ico" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap"
+      rel="stylesheet"
+    />
     <title><%= title %></title>
     <meta
       name="description"
@@ -26,18 +30,22 @@
   </head>
 
   <body class="font-sans leading-normal tracking-normal">
-    <nav class="nav bg-gray-800 p-2 mt-0 w-full">
+    <nav class="nav bg-gray-800 py-2 mt-0 w-full fixed top-0">
       <div class="container mx-auto flex flex-wrap items-center">
         <div class="flex w-full md:w-1/2 justify-center md:justify-start text-white font-extrabold">
-          <a class="text-white no-underline hover:text-white hover:no-underline" href="#">
+          <a class="text-white no-underline hover:text-white hover:no-underline" href="/">
             <span class="title text-3xl pl-2"><%= site.site_name %></span>
           </a>
         </div>
         <div class="flex w-full pt-2 content-center justify-between md:w-1/2 md:justify-end">
           <ul class="list-reset flex justify-between flex-1 md:flex-none items-center">
             <li class="mr-3">
-              <a class="inline-block text-gray-300 no-underline hover:text-gray-100 hover:text-underline py-2 px-4" href="#about">About</a>
-            </li>            
+              <a
+                class="inline-block text-gray-300 no-underline hover:text-gray-100 hover:text-underline py-2 px-4"
+                href="#about"
+                >About</a
+              >
+            </li>
             <li class="mr-3">
               <a
                 class="inline-block text-gray-300 no-underline hover:text-gray-100 hover:text-underline py-2 px-4"
@@ -46,13 +54,17 @@
               >
             </li>
             <li class="mr-3">
-              <a class="inline-block text-gray-300 no-underline hover:text-gray-100 hover:text-underline py-2 px-4" href="#hours">Hours</a>
-            </li>            
+              <a
+                class="inline-block text-gray-300 no-underline hover:text-gray-100 hover:text-underline py-2 px-4"
+                href="#hours"
+                >Hours</a
+              >
+            </li>
             <li class="mr-3">
               <a
                 class="inline-block text-gray-300 no-underline hover:text-gray-100 hover:text-underline py-2 px-4"
                 href="#contact"
-                >Contact Us</a
+                >Contact</a
               >
             </li>
           </ul>
@@ -60,9 +72,7 @@
       </div>
     </nav>
 
-    <div class="content container px-4 py-4">
-      <%- content %>
-    </div>
+    <div class="content container px-4 py-4 mx-auto mt-120"><%- content %></div>
 
     <footer class="footer p-2 mt-0">
       <small class="text-white">&copy; 2021 - Uitzicht Pharmacy</small>
